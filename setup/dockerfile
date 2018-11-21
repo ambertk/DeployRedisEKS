@@ -1,0 +1,5 @@
+FROM python
+RUN pip install redis
+COPY ./setup_redis_wq.py /setup_redis_wq.py
+
+CMD  python setup_redis_wq.py 2 10000

@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: setup-wq-2
+spec:
+  parallelism: 1
+  template:
+    metadata:
+      name: setup-wq-2
+    spec:
+      containers:
+      - name: c
+        image: 197441620132.dkr.ecr.us-west-2.amazonaws.com/setup-wq-2
+      restartPolicy: OnFailure
